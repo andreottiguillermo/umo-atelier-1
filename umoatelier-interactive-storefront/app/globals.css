@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-manrope), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  /* Taupe / clay tones used across the site */
+  --color-clay: var(--clay);
+  --color-clay-foreground: var(--clay-foreground);
+
+  /* Neutral gray for model display titles */
+  --color-stone: var(--stone);
+
+  /* Quoter (dark ticket) palette */
+  --color-q-bg: var(--q-bg);
+  --color-q-bg-soft: var(--q-bg-soft);
+  --color-q-paper: var(--q-paper);
+  --color-q-ink: var(--q-ink);
+  --color-q-ink-soft: var(--q-ink-soft);
+  --color-q-amber: var(--q-amber);
+  --color-q-amber-bright: var(--q-amber-bright);
+  --color-q-copper: var(--q-copper);
+  --color-q-muted: var(--q-muted);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Main site palette (UMO Atelier) */
+  --background: #f0eadc; /* crema */
+  --foreground: #323236; /* casi negro */
+  --card: #f0eadc;
+  --card-foreground: #323236;
+  --muted: #e2dccc;
+  --muted-foreground: #8a857a; /* taupe suave */
+  --accent: #9a8d86; /* malva/taupe */
+  --accent-foreground: #f0eadc;
+  --border: rgba(50, 50, 54, 0.14);
+  --primary: #323236;
+  --primary-foreground: #f0eadc;
+
+  --clay: #93857f; /* fondo taupe de secciones */
+  --clay-foreground: #f0eadc;
+
+  --stone: #75757b; /* gris neutro para títulos de modelos */
+
+  /* Quoter palette (ticket oscuro estilo Claude) */
+  --q-bg: #1b1815;
+  --q-bg-soft: #241f1a;
+  --q-paper: #f1e7d8;
+  --q-ink: #241f1a;
+  --q-ink-soft: #5b5245;
+  --q-amber: #c68a3d;
+  --q-amber-bright: #e3a85b;
+  --q-copper: #a6572b;
+  --q-muted: #8a8074;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
